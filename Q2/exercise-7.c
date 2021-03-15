@@ -11,14 +11,4 @@ int mian(){
     len = strlen(octal);
     intoctal = atoi(octal);
 
-
-
-
-
-
-
-
-
-
-
 }
