@@ -1,7 +1,9 @@
 #include <stdio.h>
+
 int i = 10;
 int j = 1;
-void swap(int , int);
+
+void swap(int , int );
 int f1(int );
 void f2(int , int * );
 
@@ -9,30 +11,32 @@ int main(){
     {
         int i = 1;
         int j = 10;
-        swap(i, j);
+
+        swap(i, j); // i = 1 & j = 10
         printf("1) i = %d  j = %d\n", i, j);
 
-        j = f1(i++);
+        j = f1(i++); // i = 1 
         printf("2) i = %d  j = %d\n", i, j);
 
-        f2(f1(i), &j);
+        f2(f1(i), &j); // i = 7 & j = 6
         printf("3) i = %d j = %d\n", i, j);
     }
-    printf("44) i = %d j = %d\n", i, j);
     j = f1(i / 2);
     printf("4) i = %d j = %d\n", i, j);
 
     f2(f1(i), &j);
     printf("5) i = %d j = %d\n", i, j);
+
     return 0;                                                                              
 }
 
 void swap(int a, int b){
-    int tmp;
-    tmp = b;
+    int temp;
+    temp = b;
     b = a;
-    a = tmp;
+    a = temp;
 }
+
 int f1(int x){
     static int j = 5;
     i++;
@@ -41,6 +45,6 @@ int f1(int x){
 }
 
 void f2(int x, int *p){
-    *p += x;
+    *p += x;    
     *p = (*p > 20) ? 20 : *p++;
 }

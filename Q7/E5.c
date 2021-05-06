@@ -8,11 +8,11 @@ int main(){
     char input;
     printf("Enter Char 0-9 : ");
     scanf("%c", &input);
-    chrTOint(input);
+    input = chrTOint(input);
+    printf("Your Integer Number Is : %d\n", input);
 
 }
 int chrTOint(char input){
     input = (input >= '0' && input <= '9') ? input - 48: -1;
-    printf("Your Integer Number Is : %d\n", input);
-
+    return input;
 }

@@ -6,7 +6,7 @@ int main(){
     float input, k = 0;
     for (int i = 0; i < 100; i++){
         printf("Enter Number : ");
-        scanf("%d", &input);
+        scanf("%f", &input);
         if (input == -100){
             MeanNums(input, k);
             break;
